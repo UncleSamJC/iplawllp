@@ -1,6 +1,6 @@
-# Astroship - Astro SAAS Starter Website Template
+# Based on Astroship - A website for steve
 
-Astroship is a free starter astro website template for saas, startups, marketing websites, landing pages & blogs. Built with Astro & TailwindCSS.
+A free website for steve, as his old one is simple and looks not professional.
 
 
 ### 1. Clone the repo
