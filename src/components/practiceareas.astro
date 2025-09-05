@@ -1,0 +1,68 @@
+---
+// @ts-ignore
+import { Icon } from "astro-icon/components";
+
+const features = [
+  {
+    title: "PATENT",
+    description:
+      "We assess the patentability of new innovations, prepare and file patent applications, and advise on patent strategy and infringement issues.",
+    icon: "bx:bxs-briefcase",
+  },
+  {
+    title: "TRADEMARK",
+    description:
+      "We help you determine if trademarks are available to adopt and use and help you obtain trademark protection in Canada and abroad.",
+    icon: "bx:bxs-window-alt",
+  },
+  {
+    title: "IP LITIGATION",
+    description:
+      "We help you stop your competitors from infringing your intellectual property rights as well as defeat infringement claims made against you ",
+    icon: "bx:bxs-data",
+  },
+  {
+    title: "COPYRIGHT",
+    description:
+      "We advise on all types of copyright issues and have the requisite technical expertise to analyze software and other digital works.",
+    icon: "bx:bxs-bot",
+  },
+  {
+    title: "INDUSTRIAL DESIGN",
+    description:
+      "We identify protectable designs and obtain design protection in Canada, the United States and elsewhere around the world.",
+    icon: "bx:bxs-file-find",
+  },
+  {
+    title: "IP AGREEMENT",
+    description:
+      "We draft and advise on assignments and licences of intellectual property rights, as well as joint ownership and non-disclosure agreements.",
+    icon: "bx:bxs-user",
+  },
+];
+---
+
+<div class="mt-16 md:mt-0">
+  <h2 class="text-4xl lg:text-5xl font-bold lg:tracking-tight">
+    Everything you need to start a New IP
+  </h2>
+  <p class="text-lg mt-4 text-slate-600">
+    IP law is the one comes batteries included. 
+  </p>
+</div>
+
+<div class="grid sm:grid-cols-2 md:grid-cols-3 mt-16 gap-16">
+  {
+    features.map((item) => (
+      <div class="flex gap-4 items-start">
+        <div class="mt-1 bg-black rounded-full  p-2 w-8 h-8 shrink-0">
+          <Icon class="text-white" name={item.icon} />
+        </div>
+        <div>
+          <h3 class="font-semibold text-lg">{item.title}</h3>{" "}
+          <p class="text-slate-500 mt-2 leading-relaxed">{item.description}</p>
+        </div>
+      </div>
+    ))
+  }
+</div>
