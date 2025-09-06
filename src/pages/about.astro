@@ -1,57 +1,127 @@
 ---
-import { getCollection } from "astro:content";
-import { Picture } from "astro:assets";
 import Layout from "@/layouts/Layout.astro";
 import Container from "@/components/container.astro";
 import Sectionhead from "@/components/sectionhead.astro";
-
-// Filter team entries with 'draft: false' & date before current date
-const publishedTeamMembers = await getCollection("team", ({ data }) => {
-  return !data.draft && data.publishDate < new Date();
-});
+import { Icon } from "astro-icon/components";
 ---
 
-<Layout title="About">
+<Layout title="About Island IP Law">
   <Container>
     <Sectionhead>
-      <Fragment slot="title">About</Fragment>
-      <Fragment slot="desc">We are a small passionate team.</Fragment>
+      <Fragment slot="title">About Island IP Law</Fragment>
+      <Fragment slot="desc">Your trusted intellectual property partner in Nanaimo.</Fragment>
     </Sectionhead>
 
-    <div class="flex flex-col gap-3 mx-auto max-w-4xl mt-16">
-      <h2 class="font-bold text-3xl text-gray-800">
-        Empowering the world with Astro.
+    <!-- Mission Statement -->
+    <div class="flex flex-col gap-6 mx-auto max-w-4xl mt-16">
+      <h2 class="font-bold text-3xl lg:text-4xl text-gray-800 text-center">
+        Any business can be made better through strategic IP protection.
       </h2>
-      <p class="text-lg leading-relaxed text-slate-500">
-        We're a multi-cultural team from around the world! We come from diverse
-        backgrounds, bringing different personalities, experiences and skills to
-        the job. This is what makes our team so special.
+      <p class="text-xl leading-relaxed text-slate-600 text-center max-w-3xl mx-auto">
+        We approach intellectual property from a business objectives perspective, creating innovative solutions that help your company thrive and grow.
       </p>
     </div>
-    <div class="grid md:grid-cols-3 gap-10 mx-auto max-w-4xl mt-12">
-      {
-        publishedTeamMembers.map((teamMemberEntry) => (
-          <div class="group">
-            <div class="w-full aspect-square">
-              <Picture
-                src={teamMemberEntry.data.avatar.src}
-                alt={teamMemberEntry.data.avatar.alt}
-                sizes="(max-width: 800px) 100vw, 400px"
-                width={400}
-                height={400}
-                class="w-full rounded-sm transition group-hover:-translate-y-1 group-hover:shadow-xl bg-white object-cover object-center aspect-square"
-              />
-            </div>
 
-            <div class="mt-4 text-center">
-              <h2 class="text-lg text-gray-800">{teamMemberEntry.data.name}</h2>
-              <h3 class="text-sm text-slate-500">
-                {teamMemberEntry.data.title}
-              </h3>
-            </div>
+    <!-- Our Expertise -->
+    <div class="mt-24">
+      <h3 class="text-3xl font-bold text-gray-800 text-center mb-12">
+        Trusted Expertise You Can Count On
+      </h3>
+      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
+        <div class="text-center">
+          <div class="bg-emerald-100 rounded-full p-4 w-16 h-16 mx-auto mb-4 flex items-center justify-center">
+            <Icon class="text-emerald-600 w-8 h-8" name="bx:bx-certification" />
           </div>
-        ))
-      }
+          <h4 class="font-semibold text-lg text-gray-800 mb-2">Certified Specialists</h4>
+          <p class="text-slate-500">Registered patent and trademark agents with proven expertise.</p>
+        </div>
+        <div class="text-center">
+          <div class="bg-blue-100 rounded-full p-4 w-16 h-16 mx-auto mb-4 flex items-center justify-center">
+            <Icon class="text-blue-600 w-8 h-8" name="bx:bx-group" />
+          </div>
+          <h4 class="font-semibold text-lg text-gray-800 mb-2">2,400+ Clients</h4>
+          <p class="text-slate-500">Successfully represented businesses across diverse industries.</p>
+        </div>
+        <div class="text-center">
+          <div class="bg-purple-100 rounded-full p-4 w-16 h-16 mx-auto mb-4 flex items-center justify-center">
+            <Icon class="text-purple-600 w-8 h-8" name="bx:bx-dollar-circle" />
+          </div>
+          <h4 class="font-semibold text-lg text-gray-800 mb-2">Budget-Conscious</h4>
+          <p class="text-slate-500">Transparent pricing with cost predictability you can trust.</p>
+        </div>
+        <div class="text-center">
+          <div class="bg-orange-100 rounded-full p-4 w-16 h-16 mx-auto mb-4 flex items-center justify-center">
+            <Icon class="text-orange-600 w-8 h-8" name="bx:bx-target-lock" />
+          </div>
+          <h4 class="font-semibold text-lg text-gray-800 mb-2">Direct Experience</h4>
+          <p class="text-slate-500">Majority of our work involves directly advising businesses like yours.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- What We Do -->
+    <div class="mt-24 bg-gray-50 rounded-lg p-8 lg:p-12">
+      <h3 class="text-3xl font-bold text-gray-800 text-center mb-8">
+        Comprehensive IP Services
+      </h3>
+      <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+        <div>
+          <h4 class="font-semibold text-xl text-gray-800 mb-4">Patent & Trademark Services</h4>
+          <ul class="space-y-2 text-slate-600">
+            <li class="flex items-start gap-2">
+              <Icon class="text-emerald-500 w-5 h-5 mt-0.5 shrink-0" name="bx:bx-check" />
+              Determine patentability of innovations
+            </li>
+            <li class="flex items-start gap-2">
+              <Icon class="text-emerald-500 w-5 h-5 mt-0.5 shrink-0" name="bx:bx-check" />
+              Obtain patents and register trademarks
+            </li>
+            <li class="flex items-start gap-2">
+              <Icon class="text-emerald-500 w-5 h-5 mt-0.5 shrink-0" name="bx:bx-check" />
+              Clear and protect your brand identity
+            </li>
+            <li class="flex items-start gap-2">
+              <Icon class="text-emerald-500 w-5 h-5 mt-0.5 shrink-0" name="bx:bx-check" />
+              Identify potential IP conflicts early
+            </li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="font-semibold text-xl text-gray-800 mb-4">IP Enforcement & Defense</h4>
+          <ul class="space-y-2 text-slate-600">
+            <li class="flex items-start gap-2">
+              <Icon class="text-emerald-500 w-5 h-5 mt-0.5 shrink-0" name="bx:bx-check" />
+              Enforce your intellectual property rights
+            </li>
+            <li class="flex items-start gap-2">
+              <Icon class="text-emerald-500 w-5 h-5 mt-0.5 shrink-0" name="bx:bx-check" />
+              Defend against infringement claims
+            </li>
+            <li class="flex items-start gap-2">
+              <Icon class="text-emerald-500 w-5 h-5 mt-0.5 shrink-0" name="bx:bx-check" />
+              Strategic IP litigation support
+            </li>
+            <li class="flex items-start gap-2">
+              <Icon class="text-emerald-500 w-5 h-5 mt-0.5 shrink-0" name="bx:bx-check" />
+              Comprehensive IP portfolio management
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Call to Action -->
+    <div class="mt-24 text-center">
+      <h3 class="text-3xl font-bold text-gray-800 mb-6">
+        Ready to Protect Your Innovation?
+      </h3>
+      <p class="text-lg text-slate-600 mb-8 max-w-2xl mx-auto">
+        Let's discuss how we can help safeguard your intellectual property and drive your business forward.
+      </p>
+      <a href="/contact" class="inline-flex items-center gap-2 bg-emerald-600 hover:bg-emerald-700 text-white font-semibold px-8 py-3 rounded-lg transition-colors">
+        <Icon class="w-5 h-5" name="bx:bx-phone" />
+        Get Started Today
+      </a>
     </div>
   </Container>
 </Layout>

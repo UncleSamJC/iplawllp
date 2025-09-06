@@ -7,37 +7,43 @@ const features = [
     title: "PATENT",
     description:
       "We assess the patentability of new innovations, prepare and file patent applications, and advise on patent strategy and infringement issues.",
-    icon: "bx:bxs-briefcase",
+    icon: "bx:bx-bulb",
+    color: "bg-amber-500",
   },
   {
     title: "TRADEMARK",
     description:
       "We help you determine if trademarks are available to adopt and use and help you obtain trademark protection in Canada and abroad.",
-    icon: "bx:bxs-window-alt",
+    icon: "bx:bx-certification",
+    color: "bg-blue-500",
   },
   {
     title: "IP LITIGATION",
     description:
       "We help you stop your competitors from infringing your intellectual property rights as well as defeat infringement claims made against you ",
-    icon: "bx:bxs-data",
+    icon: "bx:bx-shield-alt-2",
+    color: "bg-red-500",
   },
   {
     title: "COPYRIGHT",
     description:
       "We advise on all types of copyright issues and have the requisite technical expertise to analyze software and other digital works.",
-    icon: "bx:bxs-bot",
+    icon: "bx:bx-copyright",
+    color: "bg-purple-500",
   },
   {
     title: "INDUSTRIAL DESIGN",
     description:
       "We identify protectable designs and obtain design protection in Canada, the United States and elsewhere around the world.",
-    icon: "bx:bxs-file-find",
+    icon: "bx:bx-palette",
+    color: "bg-pink-500",
   },
   {
     title: "IP AGREEMENT",
     description:
       "We draft and advise on assignments and licences of intellectual property rights, as well as joint ownership and non-disclosure agreements.",
-    icon: "bx:bxs-user",
+    icon: "bx:bx-file-blank",
+    color: "bg-emerald-500",
   },
 ];
 ---
@@ -55,8 +61,8 @@ const features = [
   {
     features.map((item) => (
       <div class="flex gap-4 items-start">
-        <div class="mt-1 bg-black rounded-full  p-2 w-8 h-8 shrink-0">
-          <Icon class="text-white" name={item.icon} />
+        <div class={`mt-1 ${item.color} rounded-full p-2 w-10 h-10 shrink-0`}>
+          <Icon class="text-white w-6 h-6" name={item.icon} />
         </div>
         <div>
           <h3 class="font-semibold text-lg">{item.title}</h3>

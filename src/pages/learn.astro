@@ -6,7 +6,7 @@ import Container from "@/components/container.astro";
 import Sectionhead from "@/components/sectionhead.astro";
 
 // Filter learn entries with 'draft: false' & date before current date
-const publishedLearnEntries = await getCollection("blog", ({ data }) => {
+const publishedLearnEntries = await getCollection("learn", ({ data }) => {
   return !data.draft && data.publishDate < new Date();
 });
 
