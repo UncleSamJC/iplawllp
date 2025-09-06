@@ -1,5 +1,6 @@
 ---
-import Contactform from "@/components/contactform.astro";
+import { Picture } from "astro:assets";
+import contactImage from "@/assets/contact-right.png";
 import Container from "@/components/container.astro";
 import Sectionhead from "@/components/sectionhead.astro";
 import Layout from "@/layouts/Layout.astro";
@@ -15,7 +16,7 @@ import { Icon } from "astro-icon/components";
 
     <div class="grid md:grid-cols-2 gap-10 mx-auto max-w-4xl mt-16">
       <div>
-        <h2 class="font-medium text-2xl text-gray-800">Contact Astroship</h2>
+        <h2 class="font-medium text-2xl text-gray-800">Contact Island IP</h2>
         <p class="text-lg leading-relaxed text-slate-500 mt-3">
           Have something to say? We are here to help. Fill up the form or send
           email or call phone.
@@ -37,7 +38,14 @@ import { Icon } from "astro-icon/components";
         </div>
       </div>
       <div>
-        <Contactform />
+        <Picture
+          src={contactImage}
+          alt="Contact us"
+          widths={[400, 600, 800]}
+          sizes="(max-width: 768px) 100vw, 50vw"
+          loading="lazy"
+          format="avif"
+        />
       </div>
     </div>
   </Container>
