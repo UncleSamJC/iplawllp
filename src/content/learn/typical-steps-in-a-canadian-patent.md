@@ -8,11 +8,10 @@ image: {
 }
 publishDate: "2024-09-07 15:39"
 category: "Tutorials"
-author: "Connor Lopez"
+author: "Steve Burri"
 tags: [patent]
 ---
 
-# Typical Steps in a Canadian Patent Application
 
 ## Preparing and Filing Your Patent Application in Canada
 The first step in protecting your invention is preparing and filing a patent application with the **Canadian Intellectual Property Office (CIPO)**. A complete application typically contains:

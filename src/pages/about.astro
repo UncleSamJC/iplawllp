@@ -3,6 +3,7 @@ import Layout from "@/layouts/Layout.astro";
 import Container from "@/components/container.astro";
 import Sectionhead from "@/components/sectionhead.astro";
 import { Icon } from "astro-icon/components";
+import PrimaryButton from "@/components/ui/primary-button.astro";
 ---
 
 <Layout title="About Island IP Law">
@@ -118,10 +119,11 @@ import { Icon } from "astro-icon/components";
       <p class="text-lg text-slate-600 mb-8 max-w-2xl mx-auto">
         Let's discuss how we can help safeguard your intellectual property and drive your business forward.
       </p>
-      <a href="/contact" class="inline-flex items-center gap-2 bg-emerald-600 hover:bg-emerald-700 text-white font-semibold px-8 py-3 rounded-lg transition-colors">
-        <Icon class="w-5 h-5" name="bx:bx-phone" />
-        Get Started Today
-      </a>
+      <PrimaryButton 
+        href="/contact" 
+        icon="bx:bx-phone" 
+        text="Get Started Today" 
+      />
     </div>
   </Container>
 </Layout>
