@@ -1,7 +1,7 @@
 ---
 draft: false
-title: "More articles TBD A"
-snippet: "More articles TBD A"
+title: "More articles TBD D"
+snippet: "More articles TBD D"
 image: {
     src: "https://images.unsplash.com/photo-1667372393119-3d4c48d07fc9?&fit=crop&w=430&h=240",
     alt: "steps to get a Canidian Patent"
